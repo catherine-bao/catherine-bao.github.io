@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Gabarito:wght@600&family=Overpass&display=swap");
+/* makes sizing simpler */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* remove default spacing */
+/* force styling of type through styling, rather than elements */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* dark mode user-agent-styles */
+/* min body height */
+body {
+  min-height: 100vh;
+}
+
+a, button {
+  cursor: revert;
+}
+
+/* responsive images/videos */
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+input, textarea {
+  -webkit-user-select: auto;
+     -moz-user-select: auto;
+          user-select: auto;
+}
+
+body {
+  background-color: #FFF1DD;
+  font-family: "Overpass", sans-serif;
+  color: #401A1A;
+}
+
+.header {
+  margin: auto;
+  text-align: center;
+  font-family: "Gabarito", sans-serif;
+}
+.header h1 {
+  font-size: 50px;
+  margin-top: 40px;
+}
+.header .navbar {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 30px 200px 30px 200px;
+  font-size: 20px;
+}
+.header .yellow_wave {
+  margin-top: 30px;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+.introduction {
+  text-align: left;
+  margin: 50px 50% 20px 10%;
+}
+.introduction h2 {
+  font-size: 30px;
+  font-family: "Gabarito", sans-serif;
+}
+.introduction p {
+  font-family: "Overpass", sans-serif;
+  padding-top: 10px;
+  font-size: 18px;
+}
+
+.projects h2 {
+  font-family: "Gabarito", sans-serif;
+  font-size: 28px;
+  margin: 40px 10% 0px 10%;
+}
+.projects hr {
+  width: 100px;
+  border: 4px solid #4BA3B2;
+  margin: 0px 10% 0px 10%;
+}
+.projects .project {
+  display: grid;
+  grid-template-columns: repeat(3, 3fr);
+  gap: 10px;
+  margin: 50px 10% 50px 10%;
+}
+.projects ._image {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 200px;
+}
+.projects ._image .overlay {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #401A1A;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity ease 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.projects ._image .overlay .title {
+  font-family: "Gabarito", sans-serif;
+  color: white;
+  font-size: 16pt;
+  text-align: center;
+}
+.projects ._image .overlay .desc {
+  font-family: "Overpass", sans-serif;
+  color: white;
+  font-size: 12pt;
+  text-align: center;
+}
+.projects ._image.--bottom img {
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+.projects ._image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.projects ._image:hover .overlay, .projects ._image:focus .overlay {
+  opacity: 0.8;
+}
+
+.footer {
+  background-color: #D40000;
+  color: #FFF1DD;
+}
+.footer p {
+  font-family: "Overpass", sans-serif;
+  font-size: 12pt;
+  padding: 50px;
+}/*# sourceMappingURL=index.css.map */
