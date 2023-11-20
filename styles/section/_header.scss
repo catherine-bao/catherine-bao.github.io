@@ -1,10 +1,20 @@
+html{
+  scroll-behavior: smooth;
+}
+
 body{
   background-color: $backgroundColor1;
   font-family: 'Overpass', sans-serif;
   color: $textColor1;
 }
 
+a{
+  text-decoration: inherit;
+  color: inherit;
+}
+
 .header{
+
   h1{
     font-size: 50px;
     margin-top: 40px;
@@ -36,7 +46,7 @@ body{
 
 .introduction{
   text-align: left;
-  margin: 50px 50% 20px 10%;
+  margin: 70px 50% 50px 10%;
   h2{
     font-size: 30px;
     font-family: 'Gabarito', sans-serif;
@@ -70,7 +80,7 @@ body{
   ._image{
     position: relative;
     overflow: hidden;
-    padding-bottom: 200px;
+    padding-bottom: 438px;
     .overlay{
       content: "";
       position: absolute;
@@ -87,7 +97,7 @@ body{
       align-items: center;
       justify-content: center;
 
-      .title{
+      .title{ 
         font-family: 'Gabarito', sans-serif;
         color: white;
         font-size: 16pt;
@@ -123,12 +133,72 @@ body{
 
 }
 
+.back_top{
+  
+  padding-top: 50px;
+  padding-bottom: 50px;
+  img{
+    opacity: .5;
+    margin: auto;
+    height: 50px;
+    
+  }
+  p{
+    font-size: 12pt;
+    text-align: center;
+    opacity: .75;
+    padding-top: 10px;
+  }
+  &:hover, &:focus{
+    img, p{
+      opacity: 1;
+  }}
+}
+
+
 .footer{
   background-color: $backgroundColor2;
   color: $backgroundColor1;
+  .footer_content{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-left: 75%;
+    padding-top: 100px;
+    padding-bottom: 20px;
+  }
   p{
     font-family: 'Overpass', sans-serif;
     font-size: 12pt;
-    padding: 50px;
   }
+  .social-links{
+    display: flex;
+    gap: 16px;
+    //padding-right: 20px;
+    // //top right bottom left
+    // padding: 100px 20px 20px 75%;
+  }
+}
+
+.work {
+  display: inline-block;
+  position: relative;
+}
+
+.work::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 5px;
+  bottom: 0;
+  left: 0;
+  background-color: $backgroundColor2;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.work:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }

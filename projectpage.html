@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Page</title>
+    <link rel="stylesheet" href="./styles/index.css" />
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" ></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
+
+
+    <script src="index.js" defer></script>
+  </head>
+
+  <body>
+    <div id="up"></div>
+    <div id="nav-holder"></div>
+    <div class="project_overview">
+      <div class="project_left">
+        <h2 class="project_title">The Borrowers</h2>
+        <h3 class="project_desc">
+          Book Cover Redesign <br />Graphic Design II
+        </h3>
+      </div>
+      <p>
+        For this project, we had to choose a book and redesign its cover. I
+        chose "The Borrowers," by Mary Norton, and opted for a cover utilizing
+        photography. In the book, the "Borrowers" are little people that borrow
+        items from humans to use in the home. Therefore, for the objects, I used
+        items mentioned in the story. I then experimented in Photoshop and used
+        stock photos to create my composition. After reaching a concept I liked,
+        I recreated the composition using objects I found in my home.
+      </p>
+    </div>
+    <div class="project_section">
+      <h3>Process</h3>
+      <div class="image_1">
+        <div class="image">
+            <img src="./img/borrowers_moodboard.png" alt="" />
+        </div>
+        <div class="image">
+            <img src="./img/borrowers_stockedit.jpg" alt="" />
+        </div>
+        <div class="image">
+            <img src="./img/bookcoverphoto.jpg" alt="" />
+        </div>
+        <div class="image">
+            <img src="./img/bookcoverphoto.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+    <div class="final_section">
+      <h3>Finished Design</h3>
+      <div class="image_2">
+        <img src="./img/Bao_Catherine_arts304_book_mockup.jpg" alt="" />
+        <img src="./img/theborrowers.jpg" alt="" />
+      </div>
+    </div>
+    <div class="buttons">
+        <button>prev. project</button>
+        <a href="./index.html">
+            <button>all works</button>
+        </a>
+        <button>next project</button>
+    </div>
+    <div class="back_top">
+        <a href="#up">
+          <img src="img/arrow.png" alt="">
+          <p>back to top</p>
+        </a>
+      </div>
+    <div id="footer-holder"></div>
+  </body>
+</html>
+
+<script src="//code.jquery.com/jquery.min.js"></script>
+<script>
+  $.get("navigation.html", function (data) {
+    $("#nav-holder").replaceWith(data);
+  });
+  $.get("footer.html", function (data) {
+    $("#footer-holder").replaceWith(data);
+  });
+</script>

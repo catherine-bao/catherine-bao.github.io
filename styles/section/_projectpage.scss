@@ -1,0 +1,81 @@
+body{
+    h3{
+        font-size: 25px;
+        font-family: 'Gabarito', sans-serif;
+    }
+}
+.project_overview{
+    display: flex;
+    justify-content:space-around;
+    text-align: left;
+    align-items: center;
+    .project_left{
+        //top right bottom left
+        width: 100%;
+        margin: 50px 10% 20px; 
+        //padding: 40px;
+        h2{
+            font-size: 35px;
+            font-family: 'Gabarito', sans-serif;
+          }
+        h3{
+            font-size: 18px;
+            font-family: 'Overpass', sans-serif;
+            color: $backgroundColor2;
+        }
+    }
+
+      p{
+        margin: 50px 10% 20px; 
+        font-family: 'Overpass', sans-serif;
+        padding-top: 10px;
+        font-size: 18px;
+      }
+}
+
+.project_section{
+    margin-top: 50px;
+    margin-left: 10%;
+    img{
+        max-width: 500px;
+    }
+  }
+
+.final_section{
+    margin: 50px 10% 20px;
+    h3{
+        margin-bottom: 20px;
+    }
+    .image_2{
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+
+        img{
+            max-width: 600px;
+        }
+    }
+}
+
+.buttons{
+    display: flex;
+    gap: 70px;
+    margin: 70px 10% 20px;
+    justify-content: center;
+
+    button{
+        border: none;
+        border-radius: 10px;
+        background-color: #397A89;
+        color: white;
+        padding: 15px 45px;
+        text-align: center;
+        display: inline-block;
+        font-family: 'Gabarito', sans-serif;
+        font-size: 18px;
+
+        &:hover, &:focus{
+            background-color: #3A9DB4;
+          }
+    }
+}

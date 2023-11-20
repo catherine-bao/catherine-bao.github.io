@@ -1,20 +1,20 @@
-// const sectionJS = document.querySelectorAll(".section")[0];
+const imgContainer = document.querySelector('.image_1');
+console.log(imgContainer);
 
-// const sectionJquery = $(".section");
+// if(imgContainer){
+//     console.log("inside")
 
-// console.log(sectionJS);
+//     $(imgContainer).slick({
+//         infinite: true,
+//         slidesToShow: 3,
+//         slidesToScroll: 3
+//         // variablewidth:true
+//         // centerMode:true
+//         // prevArrow: $(backbutton)
+//         // nextArrow: $(forwardbutton)
+//     });
 
-// console.log(sectionJquery);
+// }
 
-// sectionJquery.on('click', function() {
-//     alert('caution dont click me again');
-// });
 
-$(document).ready(function(){
 
-    $('.slideshow').slick({
-        slidesToShow: 3,
-        slidesToScroll: 3
-    });
-
-  });
