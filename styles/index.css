@@ -66,11 +66,43 @@ a {
 .header .navbar {
   display: flex;
   justify-content: space-evenly;
-  margin: 30px 200px 30px 200px;
-  font-size: 20px;
+  margin: 30px 10% 30px 10%;
+}
+.header .navbar h3 {
+  font-size: 25px;
+}
+@media screen and (max-width: 430px) {
+  .header .navbar {
+    margin: 30px 5% 30px 5%;
+  }
+  .header .navbar h3 {
+    font-size: 20px;
+  }
+}
+.header .navbar a {
+  position: relative;
+}
+.header .navbar a img {
+  max-height: 20px;
+  width: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  transition: -webkit-clip-path 0.1s ease-in-out;
+  transition: clip-path 0.1s ease-in-out;
+  transition: clip-path 0.1s ease-in-out, -webkit-clip-path 0.1s ease-in-out;
+}
+.header .navbar a:hover img, .header .navbar a:focus img {
+  display: block;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 .header .yellow_wave {
-  margin-top: 30px;
+  margin-top: 40px;
   -o-object-fit: fill;
      object-fit: fill;
 }
@@ -88,6 +120,17 @@ a {
   padding-top: 10px;
   font-size: 18px;
 }
+@media screen and (max-width: 430px) {
+  .introduction {
+    margin: 70px 10% 50px 10%;
+  }
+  .introduction h2 {
+    font-size: 25px;
+  }
+  .introduction p {
+    font-size: 16px;
+  }
+}
 
 .projects h2 {
   font-family: "Gabarito", sans-serif;
@@ -103,7 +146,13 @@ a {
   display: grid;
   grid-template-columns: repeat(3, 3fr);
   gap: 10px;
-  margin: 50px 10% 50px 10%;
+  margin: 50px 10% 0px 10%;
+}
+@media screen and (max-width: 430px) {
+  .projects .project {
+    grid-template-columns: repeat(1, 9fr);
+    margin: 50px 5% 0px 5%;
+  }
 }
 .projects ._image {
   position: relative;
@@ -156,8 +205,9 @@ a {
 }
 
 .back_top {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  margin-left: 47%;
+  margin-right: 47%;
+  padding: 45px 0 45px;
 }
 .back_top img {
   opacity: 0.5;
@@ -173,49 +223,47 @@ a {
 .back_top:hover img, .back_top:hover p, .back_top:focus img, .back_top:focus p {
   opacity: 1;
 }
+@media screen and (max-width: 430px) {
+  .back_top {
+    margin-left: 40%;
+    margin-right: 40%;
+  }
+}
 
 .footer {
   background-color: #D40000;
   color: #FFF1DD;
 }
+.footer #footer_arrow {
+  margin: auto;
+  max-width: 80%;
+}
 .footer .footer_content {
   display: flex;
   align-items: center;
-  gap: 15px;
-  padding-left: 75%;
-  padding-top: 100px;
-  padding-bottom: 20px;
+  justify-content: flex-end;
+  gap: 12px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-right: 40px;
 }
 .footer p {
   font-family: "Overpass", sans-serif;
-  font-size: 12pt;
+  font-size: 14pt;
 }
 .footer .social-links {
   display: flex;
-  gap: 16px;
+  gap: 10px;
 }
-
-.work {
-  display: inline-block;
-  position: relative;
-}
-
-.work::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 5px;
-  bottom: 0;
-  left: 0;
-  background-color: #D40000;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-
-.work:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
+@media screen and (max-width: 430px) {
+  .footer #footer_arrow {
+    height: 40px;
+  }
+  .footer .footer_content {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 30px;
+  }
 }
 
 body h3 {
@@ -248,20 +296,70 @@ body h3 {
   padding-top: 10px;
   font-size: 18px;
 }
+@media screen and (max-width: 430px) {
+  .project_overview {
+    flex-wrap: wrap;
+  }
+  .project_overview p {
+    margin-top: 20px;
+  }
+}
 
 .project_section {
   margin-top: 50px;
+}
+.project_section h3 {
   margin-left: 10%;
 }
+.project_section .slider_area {
+  position: relative;
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+.project_section .leftbutton {
+  position: absolute;
+  top: 40%;
+  left: -5%;
+}
+.project_section .rightbutton {
+  position: absolute;
+  top: 40%;
+  right: -5%;
+}
 .project_section img {
-  max-width: 500px;
+  float: left;
+  width: 100%;
+  height: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.project_section button {
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+.project_section .button {
+  height: 60px;
+}
+.project_section #next {
+  transform: scaleX(-1);
+}
+@media screen and (max-width: 430px) {
+  .project_section button {
+    display: none;
+  }
+}
+
+.image {
+  padding: 10px;
 }
 
 .final_section {
-  margin: 50px 10% 20px;
+  margin: 60px 10% 20px;
 }
 .final_section h3 {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 .final_section .image_2 {
   display: flex;
@@ -270,6 +368,17 @@ body h3 {
 }
 .final_section .image_2 img {
   max-width: 600px;
+}
+@media screen and (max-width: 430px) {
+  .final_section h3 {
+    margin-top: 1325px;
+  }
+  .final_section .image_2 {
+    flex-wrap: wrap;
+  }
+  .final_section .image_2 img {
+    max-width: 100%;
+  }
 }
 
 .buttons {
@@ -281,7 +390,7 @@ body h3 {
 .buttons button {
   border: none;
   border-radius: 10px;
-  background-color: #397A89;
+  background-color: #397a89;
   color: white;
   padding: 15px 45px;
   text-align: center;
@@ -290,5 +399,12 @@ body h3 {
   font-size: 18px;
 }
 .buttons button:hover, .buttons button:focus {
-  background-color: #3A9DB4;
+  background-color: #3a9db4;
+}
+@media screen and (max-width: 430px) {
+  .buttons {
+    flex-wrap: wrap;
+    gap: 50px;
+    margin: 50px 10% 20px;
+  }
 }/*# sourceMappingURL=index.css.map */

@@ -1,81 +1,158 @@
-body{
-    h3{
-        font-size: 25px;
-        font-family: 'Gabarito', sans-serif;
-    }
+body {
+  h3 {
+    font-size: 25px;
+    font-family: "Gabarito", sans-serif;
+  }
 }
-.project_overview{
-    display: flex;
-    justify-content:space-around;
-    text-align: left;
-    align-items: center;
-    .project_left{
-        //top right bottom left
-        width: 100%;
-        margin: 50px 10% 20px; 
-        //padding: 40px;
-        h2{
-            font-size: 35px;
-            font-family: 'Gabarito', sans-serif;
-          }
-        h3{
-            font-size: 18px;
-            font-family: 'Overpass', sans-serif;
-            color: $backgroundColor2;
-        }
+.project_overview {
+  display: flex;
+  justify-content: space-around;
+  text-align: left;
+  align-items: center;
+  .project_left {
+    //top right bottom left
+    width: 100%;
+    margin: 50px 10% 20px;
+    h2 {
+      font-size: 35px;
+      font-family: "Gabarito", sans-serif;
     }
-
-      p{
-        margin: 50px 10% 20px; 
-        font-family: 'Overpass', sans-serif;
-        padding-top: 10px;
-        font-size: 18px;
-      }
-}
-
-.project_section{
-    margin-top: 50px;
-    margin-left: 10%;
-    img{
-        max-width: 500px;
+    h3 {
+      font-size: 18px;
+      font-family: "Overpass", sans-serif;
+      color: $backgroundColor2;
     }
   }
 
-.final_section{
+  p {
     margin: 50px 10% 20px;
-    h3{
-        margin-bottom: 20px;
-    }
-    .image_2{
-        display: flex;
-        justify-content: center;
-        gap: 30px;
+    font-family: "Overpass", sans-serif;
+    padding-top: 10px;
+    font-size: 18px;
+  }
 
-        img{
-            max-width: 600px;
-        }
-    }
+  @media screen and (max-width: 430px){
+    flex-wrap: wrap;
+    p{
+      margin-top: 20px;
+    }}
 }
 
-.buttons{
-    display: flex;
-    gap: 70px;
-    margin: 70px 10% 20px;
-    justify-content: center;
+.project_section {
+  margin-top: 50px;
+  h3 {
+    margin-left: 10%;
+  }
 
-    button{
-        border: none;
-        border-radius: 10px;
-        background-color: #397A89;
-        color: white;
-        padding: 15px 45px;
-        text-align: center;
-        display: inline-block;
-        font-family: 'Gabarito', sans-serif;
-        font-size: 18px;
-
-        &:hover, &:focus{
-            background-color: #3A9DB4;
-          }
+  .slider_area{
+    position: relative;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 30px 0;
+  }
+  
+  .leftbutton {
+    position: absolute;
+    top: 40%;
+    left:-5%;
+  }
+  .rightbutton {
+    position: absolute;
+    top: 40%;
+    right: -5%;
+  }
+  
+  img{
+      float: left;
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      
     }
+    
+  
+  
+  button{
+    border: none;
+    background-color: transparent;
+    outline: none;
+  }
+  .button{
+    height: 60px;
+  }
+  #next{
+    transform: scaleX(-1);
+  }
+  
+  @media screen and (max-width: 430px){
+    
+    button{
+      display: none;
+    }
+  }
+  
+}
+
+
+
+.image {
+  padding: 10px;
+}
+
+.final_section {
+  margin: 60px 10% 20px;
+  h3 {
+    margin-bottom: 40px;
+  }
+  .image_2 {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+    img {
+      max-width: 600px;
+    }
+  }
+
+  @media screen and (max-width: 430px){
+    h3{
+      margin-top: 1325px;
+    }
+    .image_2{
+      flex-wrap: wrap;
+      img{
+        max-width: 100%;
+      }
+    }}
+}
+
+.buttons {
+  display: flex;
+  gap: 70px;
+  margin: 70px 10% 20px;
+  justify-content: center;
+
+  button {
+    border: none;
+    border-radius: 10px;
+    background-color: #397a89;
+    color: white;
+    padding: 15px 45px;
+    text-align: center;
+    display: inline-block;
+    font-family: "Gabarito", sans-serif;
+    font-size: 18px;
+
+    &:hover,
+    &:focus {
+      background-color: #3a9db4;
+    }
+  }
+
+  @media screen and (max-width: 430px){
+    flex-wrap: wrap;
+    gap: 50px;
+    margin: 50px 10% 20px;
+    
+  }
 }

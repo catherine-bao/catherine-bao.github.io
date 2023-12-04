@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Page</title>
     <link rel="stylesheet" href="./styles/index.css" />
-
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" ></script>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
-
-    <script src="index.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    
+    <script src="./index.js" defer>
+    
+    </script>
   </head>
 
   <body>
@@ -38,20 +37,30 @@
     </div>
     <div class="project_section">
       <h3>Process</h3>
-      <div class="image_1">
-        <div class="image">
+      <div class="slider_area">
+        <div class="leftbutton">
+          <button class="prev"><img class='button' src="/img/arrow button.png" alt=""></button>
+
+        </div>
+        <div class="image_1">
+          <div class="image">
             <img src="./img/borrowers_moodboard.png" alt="" />
-        </div>
-        <div class="image">
+          </div>
+          <div class="image">
+            <img src="./img/IMG_5450.jpg" alt="" />
+          </div>
+          <div class="image">
             <img src="./img/borrowers_stockedit.jpg" alt="" />
-        </div>
-        <div class="image">
+          </div>
+          <div class="image">
             <img src="./img/bookcoverphoto.jpg" alt="" />
+          </div>
         </div>
-        <div class="image">
-            <img src="./img/bookcoverphoto.jpg" alt="" />
+        <div class="rightbutton">
+          <button class="next"><img class='button' id="next" src="/img/arrow button.png" alt=""></button>
+
         </div>
-      </div>
+    </div>
     </div>
     <div class="final_section">
       <h3>Finished Design</h3>
@@ -86,3 +95,5 @@
     $("#footer-holder").replaceWith(data);
   });
 </script>
+
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>

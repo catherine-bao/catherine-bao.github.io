@@ -26,22 +26,43 @@ a{
   .navbar{
     display: flex;
     justify-content: space-evenly;
-    margin: 30px 200px 30px 200px;
-    font-size: 20px;
+    margin: 30px 10% 30px 10%;
+    h3{
+      font-size: 25px;
+    }
+    @media screen and (max-width: 430px){
+      margin: 30px 5% 30px 5%;
+      h3{
+        font-size: 20px;
+      }
+    };
+
+    a{
+      position: relative;
+      img{
+        max-height: 20px;
+        width: 100%;
+        object-fit: fill;
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: clip-path .1s ease-in-out;
+      }
+
+      &:hover, &:focus{
+        img{
+          display: block;
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+      }
+    }
   }
 
   .yellow_wave{
-    margin-top: 30px;
+    margin-top: 40px;
     object-fit: fill;
   }
-
-  // @include respond('1000px'){
-  //   background-color: purple
-  // };
-  // @include respond('800px'){
-  //   background-color: red;
-  //   font-size: 30px;
-  // };
 }
 
 .introduction{
@@ -56,9 +77,20 @@ a{
     padding-top: 10px;
     font-size: 18px;
   }
+
+  @media screen and (max-width: 430px){
+    margin: 70px 10% 50px 10%;
+    h2{
+      font-size: 25px;
+    }
+    p{
+      font-size: 16px;
+    }
+  };
 }
 
 .projects{
+  //projects title
   h2{
     font-family: 'Gabarito', sans-serif;
     font-size: 28px;
@@ -69,13 +101,19 @@ a{
     border: 4px solid #4BA3B2;
     margin: 0px 10% 0px 10%;
   }
-
+  //project boxes
   .project{
     display: grid;
     grid-template-columns: repeat(3, 3fr);
     gap: 10px;
-    margin: 50px 10% 50px 10%;
+    margin: 50px 10% 0px 10%;
   }
+
+  @media screen and (max-width: 430px){
+    .project{
+      grid-template-columns: repeat(1, 9fr);
+      margin: 50px 5% 0px 5%;
+    }}
 
   ._image{
     position: relative;
@@ -133,15 +171,15 @@ a{
 
 }
 
+
 .back_top{
-  
-  padding-top: 50px;
-  padding-bottom: 50px;
+  margin-left: 47%;
+  margin-right: 47%;
+  padding: 45px 0 45px;
   img{
     opacity: .5;
     margin: auto;
     height: 50px;
-    
   }
   p{
     font-size: 12pt;
@@ -153,52 +191,49 @@ a{
     img, p{
       opacity: 1;
   }}
+
+  @media screen and (max-width: 430px){
+    margin-left: 40%;
+  margin-right: 40%;
+  }
 }
 
 
 .footer{
   background-color: $backgroundColor2;
   color: $backgroundColor1;
+  #footer_arrow{
+    margin: auto;
+    max-width: 80%;
+  }
   .footer_content{
     display: flex;
     align-items: center;
-    gap: 15px;
-    padding-left: 75%;
-    padding-top: 100px;
-    padding-bottom: 20px;
+    justify-content: flex-end;
+    gap: 12px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-right: 40px;
   }
   p{
     font-family: 'Overpass', sans-serif;
-    font-size: 12pt;
+    font-size: 14pt;
   }
   .social-links{
     display: flex;
-    gap: 16px;
-    //padding-right: 20px;
-    // //top right bottom left
-    // padding: 100px 20px 20px 75%;
+    gap: 10px;
+  }
+
+  @media screen and (max-width: 430px){
+    #footer_arrow{
+      height:40px;
+    }
+    .footer_content{
+      flex-wrap: wrap;
+      justify-content: center;
+      padding-left: 30px;
+    }
   }
 }
 
-.work {
-  display: inline-block;
-  position: relative;
-}
 
-.work::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 5px;
-  bottom: 0;
-  left: 0;
-  background-color: $backgroundColor2;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-
-.work:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
